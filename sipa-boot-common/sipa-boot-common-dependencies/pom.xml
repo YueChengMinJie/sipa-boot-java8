@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.12.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.sipa.boot.java8</groupId>
+    <artifactId>sipa-boot-common-dependencies</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Sipa Boot :: Common :: Dependencies</name>
+    <description>Sipa Boot Common Dependencies</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <java.version>1.8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+
+        <!-- bom -->
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+
+        <!-- sipa boot -->
+        <sipa.boot.version>1.0.0-SNAPSHOT</sipa.boot.version>
+
+        <!-- base lib -->
+        <cglib.version>3.2.10</cglib.version>
+        <freemarker.version>2.3.29</freemarker.version>
+        <javassist.version>3.22.0-GA</javassist.version>
+
+        <!-- logback -->
+        <slf4j.version>1.7.26</slf4j.version>
+        <logback.version>1.1.11</logback.version>
+
+        <!-- common -->
+        <common.lang3.version>3.8.1</common.lang3.version>
+        <common.collections.version>4.3</common.collections.version>
+        <common.io.version>2.6</common.io.version>
+        <common.codec.version>1.12</common.codec.version>
+        <common.logging.version>1.2</common.logging.version>
+        <common.configuration.version>1.10</common.configuration.version>
+        <common.beanutils.version>1.9.3</common.beanutils.version>
+        <common.csv.version>1.8</common.csv.version>
+        <common.pool2.version>2.11.1</common.pool2.version>
+        <common.text.version>1.9</common.text.version>
+        <encryption-tools.version>1.0.3</encryption-tools.version>
+        <hutool-all.version>4.5.0</hutool-all.version>
+
+        <!-- json -->
+        <jackson.version>2.11.4</jackson.version>
+        <fastjson.version>1.2.56</fastjson.version>
+        <ttl.version>2.12.4</ttl.version>
+
+        <!-- tool -->
+        <guava.version>27.1-jre</guava.version>
+        <jsoup.version>1.11.3</jsoup.version>
+        <orika.verion>1.5.4</orika.verion>
+        <janino.version>2.7.8</janino.version>
+        <pdfbox.version>2.0.15</pdfbox.version>
+        <easyexcel.version>2.2.6</easyexcel.version>
+        <html2pdf.version>2.1.0</html2pdf.version>
+        <useragent.version>1.21</useragent.version>
+        <commons-httpclient.version>3.1</commons-httpclient.version>
+
+        <!-- time -->
+        <joda.time.version>2.7</joda.time.version>
+
+        <!-- vertx -->
+        <vertx.version>3.8.5</vertx.version>
+
+        <!-- swagger -->
+        <swagger.version>1.6.6</swagger.version>
+        <swagger3.version>2.2.1</swagger3.version>
+        <springfox.version>3.0.0</springfox.version>
+
+        <!-- jwt -->
+        <jjwt.version>0.6.0</jjwt.version>
+
+        <!-- rdb -->
+        <mysql.connector.version>8.0.21</mysql.connector.version>
+        <druid.version>1.1.10</druid.version>
+        <sharding.jdbc.version>4.1.1</sharding.jdbc.version>
+        <dynamic.datasource.version>2.5.8</dynamic.datasource.version>
+        <mybatis.plus.version>3.1.0</mybatis.plus.version>
+
+        <!-- redisson -->
+        <redisson.version>3.10.0</redisson.version>
+
+        <!-- iotdb -->
+        <iotdb.version>0.12.4</iotdb.version>
+
+        <!-- hbase -->
+        <!--        <hbase.version>2.1.0-cdh6.3.2</hbase.version>-->
+        <hbase.version>2.1.0</hbase.version>
+
+        <!-- apollo -->
+        <apollo.version>1.3.0</apollo.version>
+
+        <!-- storage object -->
+        <minio.version>6.0.13</minio.version>
+
+        <!-- aliyun -->
+        <aliyun.oss.version>3.4.2</aliyun.oss.version>
+        <aliyun.sdk.version>4.4.0</aliyun.sdk.version>
+        <aliyun.mns.version>1.1.8</aliyun.mns.version>
+        <alibaba.p3c.pmd.verison>1.3.6</alibaba.p3c.pmd.verison>
+
+        <!-- wx -->
+        <weixin.java.version>3.7.0</weixin.java.version>
+
+        <!-- jpush -->
+        <jpush.version>3.4.4</jpush.version>
+
+        <!-- hitsdb -->
+        <hitsdb-client.version>0.3.7</hitsdb-client.version>
+
+        <!-- test -->
+        <testng.version>7.3.0</testng.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-aop</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-api</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-apollo</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-async</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-auth</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-cache</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-config</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-core</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-exception</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-feign</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-hystrix</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-jpush</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-log</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-mail</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-ms</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-mvc</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-oauth2</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-oss</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-resttemplate</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-ribbon</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-sms</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-swagger</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-threadpool</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-version</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-ws</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-common-zuul</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-es</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-hbase</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-iotdb</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-kafka-admin</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-kafka-consumer</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-kafka-producer</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-mongodb</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-mysql</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-redis</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.data</groupId>
+                <artifactId>sipa-boot-data-redlock</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.iot</groupId>
+                <artifactId>sipa-boot-iot-core</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.iot</groupId>
+                <artifactId>sipa-boot-iot-rule</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.iot</groupId>
+                <artifactId>sipa-boot-iot-script</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.tool</groupId>
+                <artifactId>sipa-boot-tool-liquibase</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8.tool</groupId>
+                <artifactId>sipa-boot-tool-translate</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-wx-miniapp</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-wx-pay</artifactId>
+                <version>${sipa.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.javassist</groupId>
+                <artifactId>javassist</artifactId>
+                <version>${javassist.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${common.lang3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${common.collections.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-csv</artifactId>
+                <version>${common.csv.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${common.pool2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-text</artifactId>
+                <version>${common.text.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${common.io.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${common.codec.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>${common.logging.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-configuration</groupId>
+                <artifactId>commons-configuration</artifactId>
+                <version>${common.configuration.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${common.beanutils.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>top.lrshuai.encryption</groupId>
+                <artifactId>encryption-tools</artifactId>
+                <version>${encryption-tools.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool-all.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>log4j-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jul-to-slf4j</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.janino</groupId>
+                <artifactId>janino</artifactId>
+                <version>${janino.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${ttl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ma.glasnost.orika</groupId>
+                <artifactId>orika-core</artifactId>
+                <version>${orika.verion}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>${cglib.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${aliyun.oss.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-core</artifactId>
+                <version>${aliyun.sdk.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun.mns</groupId>
+                <artifactId>aliyun-sdk-mns</artifactId>
+                <version>${aliyun.mns.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-annotation</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-core</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+                <version>${dynamic.datasource.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.ctrip.framework.apollo</groupId>
+                <artifactId>apollo-client</artifactId>
+                <version>${apollo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.shardingsphere</groupId>
+                <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+                <version>${sharding.jdbc.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.iotdb</groupId>
+                <artifactId>iotdb-jdbc</artifactId>
+                <version>${iotdb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.iotdb</groupId>
+                <artifactId>iotdb-session</artifactId>
+                <version>${iotdb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.iotdb</groupId>
+                <artifactId>tsfile</artifactId>
+                <version>${iotdb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.pdfbox</groupId>
+                <artifactId>pdfbox</artifactId>
+                <version>${pdfbox.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.hbase</groupId>
+                <artifactId>hbase-client</artifactId>
+                <version>${hbase.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>${minio.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>easyexcel</artifactId>
+                <version>${easyexcel.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-miniapp</artifactId>
+                <version>${weixin.java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.binarywang</groupId>
+                <artifactId>weixin-java-pay</artifactId>
+                <version>${weixin.java.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.itextpdf</groupId>
+                <artifactId>html2pdf</artifactId>
+                <version>${html2pdf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>eu.bitwalker</groupId>
+                <artifactId>UserAgentUtils</artifactId>
+                <version>${useragent.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-httpclient</groupId>
+                <artifactId>commons-httpclient</artifactId>
+                <version>${commons-httpclient.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda.time.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.vertx</groupId>
+                <artifactId>vertx-core</artifactId>
+                <version>${vertx.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>${testng.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.jpush.api</groupId>
+                <artifactId>jpush-client</artifactId>
+                <version>${jpush.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>hitsdb-client</artifactId>
+                <version>${hitsdb-client.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.5</version>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>${project.build.sourceEncoding}</encoding>
+                        <optimize>true</optimize>
+                        <showWarnings>true</showWarnings>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>2.7</version>
+                    <configuration>
+                        <delimiters>
+                            <delimiter>${*}</delimiter>
+                            <delimiter>@</delimiter>
+                        </delimiters>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-shade-plugin</artifactId>
+                    <version>3.2.1</version>
+                    <configuration>
+                        <filters>
+                            <filter>
+                                <artifact>*:*</artifact>
+                                <excludes>
+                                    <exclude>module-info.class</exclude>
+                                    <exclude>META-INF/*.SF</exclude>
+                                    <exclude>META-INF/*.DSA</exclude>
+                                    <exclude>META-INF/*.RSA</exclude>
+                                </excludes>
+                            </filter>
+                        </filters>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>shade</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.18</version>
+                    <configuration>
+                        <includes>
+                            <include>**/*Test*.java</include>
+                        </includes>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.surefire</groupId>
+                            <artifactId>surefire-junit47</artifactId>
+                            <version>2.18</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>cobertura-maven-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>2.22.1</version>
+                    <executions>
+                        <execution>
+                            <id>integration-test</id>
+                            <goals>
+                                <goal>integration-test</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>verify</id>
+                            <goals>
+                                <goal>verify</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.4</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.5</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <addDefaultImplementationEntries>true
+                                </addDefaultImplementationEntries>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.5</version>
+                    <configuration>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>docker-maven-plugin</artifactId>
+                    <version>0.4.14</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>exec-maven-plugin</artifactId>
+                    <version>1.6.0</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>2.6.1</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>2.9</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>versions-maven-plugin</artifactId>
+                    <version>2.7</version>
+                    <configuration>
+                        <generateBackupPoms>false</generateBackupPoms>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <version>1.3.1</version>
+                    <executions>
+                        <execution>
+                            <id>enforce-banned-dependencies</id>
+                            <goals>
+                                <goal>enforce</goal>
+                            </goals>
+                            <configuration>
+                                <rules>
+                                    <requireMavenVersion>
+                                        <version>3.0.3</version>
+                                    </requireMavenVersion>
+                                    <requireJavaVersion>
+                                        <version>${java.version}</version>
+                                    </requireJavaVersion>
+                                    <bannedDependencies>
+                                        <searchTransitive>true</searchTransitive>
+                                        <excludes>
+                                            <exclude>commons-logging</exclude>
+                                            <exclude>log4j</exclude>
+                                            <exclude>aspectj:aspectj*</exclude>
+                                            <exclude>org.springframework</exclude>
+                                        </excludes>
+                                        <includes>
+                                            <include>org.springframework:*:5.*</include>
+                                        </includes>
+                                    </bannedDependencies>
+                                </rules>
+                                <fail>true</fail>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <version>2.17</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.puppycrawl.tools</groupId>
+                            <artifactId>checkstyle</artifactId>
+                            <version>6.15</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <configLocation>checkstyle/checkstyle.xml</configLocation>
+                        <encoding>UTF-8</encoding>
+                        <consoleOutput>true</consoleOutput>
+                        <failsOnError>true</failsOnError>
+                        <linkXRef>false</linkXRef>
+                        <failOnViolation>true</failOnViolation>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>checkstyle</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>findbugs-maven-plugin</artifactId>
+                    <version>3.0.4</version>
+                    <configuration>
+                        <includeFilterFile>findbugs/findbugs.xml</includeFilterFile>
+                        <effort>Max</effort>
+                        <threshold>Low</threshold>
+                        <xmlOutput>false</xmlOutput>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>findbugs</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-pmd-plugin</artifactId>
+                    <version>3.8</version>
+                    <configuration>
+                        <sourceEncoding>utf-8</sourceEncoding>
+                        <minimumTokens>100</minimumTokens>
+                        <targetJdk>${java.version}</targetJdk>
+                        <excludes>
+                            <exclude>**/*Test.java</exclude>
+                            <exclude>**/*Create.java</exclude>
+                            <exclude>**/*Info.java</exclude>
+                            <exclude>**/*Update.java</exclude>
+                        </excludes>
+                        <excludeRoots>
+                            <excludeRoot>target/generated-sources/stubs</excludeRoot>
+                        </excludeRoots>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>pmd</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>check</goal>
+                                <goal>cpd-check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>0.8.1</version>
+                    <executions>
+                        <execution>
+                            <id>pre-unit-test</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                            <configuration>
+                                <destFile>${project.build.directory}/jacoco.exec</destFile>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>post-unit-test</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                            <configuration>
+                                <dataFile>${project.build.directory}/jacoco.exec</dataFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.0.1</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <addResources>true</addResources>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

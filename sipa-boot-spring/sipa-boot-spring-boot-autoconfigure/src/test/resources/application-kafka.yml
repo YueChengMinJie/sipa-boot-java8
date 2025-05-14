@@ -1,0 +1,29 @@
+#
+# -------------------------------------------
+# SPRING CONFIGURATION
+# -------------------------------------------
+#
+spring:
+  application:
+    name: sipa-boot-kafka-admin-test
+  main:
+    allow-bean-definition-overriding: true
+#
+# -------------------------------------------
+# SIPA BOOT CONFIGURATION
+# -------------------------------------------
+#
+sipa.boot:
+  #
+  # -------------------------------------------
+  # KAFKA CONFIGURATION
+  # -------------------------------------------
+  #
+  kafka:
+    admin:
+      enabled: true
+      brokerAddress: 192.168.1.230:30094,192.168.1.230:30095,192.168.1.230:30096
+      scram: true
+      username: admin
+      password: kafka@admin
+      classname: org.apache.kafka.common.security.scram.ScramLoginModule

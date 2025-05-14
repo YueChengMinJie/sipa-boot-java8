@@ -1,0 +1,15 @@
+${AnsiColor.BRIGHT_YELLOW}
+
+88                              88888888888           88  88     88                                                                                88                               888888888888
+88                              88                    88  88     88                ,d                                                       ,d     ""                                    88                           ,d
+88                              88                    88  88     88                88                                                       88                                           88                           88
+88  8b       d8   ,adPPYba,     88aaaaa  88       88  88  88     88  8b,dPPYba,  MM88MMM  ,adPPYba,   ,adPPYb,d8  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,           88   ,adPPYba,  ,adPPYba,  MM88MMM
+88  `8b     d8'  a8"     ""     88"""""  88       88  88  88     88  88P'   `"8a   88    a8P_____88  a8"    `Y88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a          88  a8P_____88  I8[    ""    88
+88   `8b   d8'   8b             88       88       88  88  88     88  88       88   88    8PP"""""""  8b       88  88          ,adPPPPP88    88     88  8b       d8  88       88          88  8PP"""""""   `"Y8ba,     88
+88    `8b,d8'    "8a,   ,aa     88       "8a,   ,a88  88  88     88  88       88   88,   "8b,   ,aa  "8a,   ,d88  88          88,    ,88    88,    88  "8a,   ,a8"  88       88          88  "8b,   ,aa  aa    ]8I    88,
+88      "8"       `"Ybbd8"'     88        `"YbbdP'Y8  88  88     88  88       88   "Y888  `"Ybbd8"'   `"YbbdP"Y8  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88          88   `"Ybbd8"'  `"YbbdP"'    "Y888
+                                                                                                      aa,    ,88
+                                                                                                       "Y8bbdP"
+
+${AnsiColor.BRIGHT_RED}
+Spring Boot Version: ${spring-boot.version}${spring-boot.formatted-version}

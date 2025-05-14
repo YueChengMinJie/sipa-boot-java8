@@ -1,0 +1,26 @@
+#
+# -------------------------------------------
+# SPRING CONFIGURATION
+# -------------------------------------------
+#
+spring:
+  application:
+    name: sipa-boot-hbase-test
+#
+# -------------------------------------------
+# SIPA BOOT CONFIGURATION
+# -------------------------------------------
+#
+sipa.boot:
+  #
+  # -------------------------------------------
+  # HBASE CONFIGURATION
+  # -------------------------------------------
+  #
+  hbase:
+    quorum: cdh2.ivehcore.com,cdh3.ivehcore.com,cdh4.ivehcore.com
+    clientPort: 2181
+    maxSize: 2
+    version: 20200518
+    #    tableNameMap: "{tboxMessage:'tbox_message_dev'}"
+    tableNameMap: "{tboxMessage:'tbox_message'}"

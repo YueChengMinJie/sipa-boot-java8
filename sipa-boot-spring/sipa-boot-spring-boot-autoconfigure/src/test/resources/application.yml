@@ -1,0 +1,8 @@
+#
+# -------------------------------------------
+# SPRING CONFIGURATION
+# -------------------------------------------
+#
+spring:
+  application:
+    name: sipa-boot-full-integration-test

@@ -1,0 +1,37 @@
+/target/
+*/target/
+*/*/target/
+*.log
+*.gz
+!.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+spring-boot-autoconfigure/target/classes/
+
+# senstive files
+sipa-boot-spring-boot-autoconfigure/src/test/resources/application-jpush-bak.yml
+sipa-boot-spring-boot-autoconfigure/src/test/resources/application-translate-bak.yml

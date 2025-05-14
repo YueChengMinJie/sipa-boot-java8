@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.sipa.boot.java8</groupId>
+        <artifactId>sipa-boot-common-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../sipa-boot-common-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>sipa-boot-common-zuul</artifactId>
+    <packaging>jar</packaging>
+
+    <name>Sipa Boot :: Common :: Zuul</name>
+    <description>Sipa Boot Common Zuul Project</description>
+
+    <properties>
+        <zuul.ratelimit.version>2.4.3.RELEASE</zuul.ratelimit.version>
+        <swagger.butler.version>2.0.0</swagger.butler.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sipa.boot.java8</groupId>
+            <artifactId>sipa-boot-common-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sipa.boot.java8</groupId>
+            <artifactId>sipa-boot-common-ms</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sipa.boot.java8</groupId>
+            <artifactId>sipa-boot-common-oauth2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sipa.boot.java8</groupId>
+            <artifactId>sipa-boot-common-exception</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sipa.boot.java8</groupId>
+            <artifactId>sipa-boot-common-resttemplate</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.didispace</groupId>
+            <artifactId>swagger-butler-core</artifactId>
+            <version>${swagger.butler.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.marcosbarbero.cloud</groupId>
+            <artifactId>spring-cloud-zuul-ratelimit</artifactId>
+            <version>${zuul.ratelimit.version}</version>
+        </dependency>
+    </dependencies>
+</project>

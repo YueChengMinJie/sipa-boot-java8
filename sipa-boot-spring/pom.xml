@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sipa.boot.java8</groupId>
+    <artifactId>sipa-boot-spring</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>Sipa Boot :: Spring :: Spring Boot</name>
+
+    <modules>
+        <module>sipa-boot-spring-boot-parent</module>
+        <module>sipa-boot-spring-boot-dependencies</module>
+        <module>sipa-boot-spring-boot-autoconfigure</module>
+        <module>sipa-boot-spring-boot-starters</module>
+    </modules>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <url>http://127.0.0.1:8081/repository/nexus_release/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <url>http://127.0.0.1:8081/repository/nexus_snapshot/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

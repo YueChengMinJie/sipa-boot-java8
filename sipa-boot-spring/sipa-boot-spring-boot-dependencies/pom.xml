@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.sipa.boot.java8</groupId>
+        <artifactId>sipa-boot-common-dependencies</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../../sipa-boot-common/sipa-boot-common-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>sipa-boot-spring-boot-dependencies</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Sipa Boot :: Spring :: Spring Boot Dependencies</name>
+    <description>Sipa Boot Spring Boot Dependencies Project</description>
+
+    <properties>
+        <common.spring.boot.version>1.0.0-SNAPSHOT</common.spring.boot.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Common Spring Boot -->
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-spring-boot-autoconfigure</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-spring-boot-starters</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-aop-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-api-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-apollo-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-async-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-auth-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-cache-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-es-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-exception-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-feign-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <!--            <dependency>-->
+            <!--                <groupId>com.sipa.boot.java8</groupId>-->
+            <!--                <artifactId>sipa-boot-hbase-spring-boot-starter</artifactId>-->
+            <!--                <version>${common.spring.boot.version}</version>-->
+            <!--            </dependency>-->
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-hystrix-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-iot-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-jpush-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-iotdb-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-kafka-admin-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-kafka-consumer-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-kafka-producer-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-liquibase-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-mail-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-mongodb-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-ms-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-mvc-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-mysql-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-oauth2-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-oss-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-redis-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-redlock-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-resttemplate-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-ribbon-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-sms-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-swagger-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-threadpool-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-translate-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-version-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-ws-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-wx-miniapp-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-wx-pay-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sipa.boot.java8</groupId>
+                <artifactId>sipa-boot-zuul-spring-boot-starter</artifactId>
+                <version>${common.spring.boot.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

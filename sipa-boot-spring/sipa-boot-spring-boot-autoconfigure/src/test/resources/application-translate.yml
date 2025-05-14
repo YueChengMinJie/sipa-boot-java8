@@ -1,0 +1,40 @@
+#
+# -------------------------------------------
+# SPRING CONFIGURATION
+# -------------------------------------------
+#
+spring:
+  application:
+    name: sipa-boot-translate-test
+  main:
+    allow-bean-definition-overriding: true
+#
+# -------------------------------------------
+# SIPA BOOT CONFIGURATION
+# -------------------------------------------
+#
+sipa.boot:
+  #
+  # -------------------------------------------
+  # REST TEMPLATE CONFIGURATION
+  # -------------------------------------------
+  #
+  resttemplate:
+    enabled: true
+    retryCount: 0
+    readTimeout: 300000
+    logging:
+      enabled: true
+      include-headers: true
+      include-payload: true
+  #
+  # -------------------------------------------
+  # TRANSLATE CONFIGURATION
+  # -------------------------------------------
+  #
+  translate:
+    type: youdao
+    youdao:
+      url: https://openapi.youdao.com/api
+      appKey:
+      appSecret:
