@@ -16,12 +16,6 @@ import com.sipa.boot.java8.common.log.LogFactory;
 public class SipaBootDynamicRoutingDataSource extends DynamicRoutingDataSource {
     private static final Log LOGGER = LogFactory.get(SipaBootDynamicRoutingDataSource.class);
 
-    /**
-     * remove seta & p6spy.
-     *
-     * @throws Exception
-     *             close db fail
-     */
     @Override
     public void destroy() throws Exception {
         LOGGER.info("dynamic-datasource start closing.");
