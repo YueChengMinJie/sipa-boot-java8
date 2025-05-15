@@ -3,6 +3,7 @@ package com.sipa.boot.java8.common.swagger.config;
 import java.util.Collections;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -28,17 +29,22 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 @EnableOpenApi
-@ComponentScan(value = {"com.sipa.boot.java8.**.common.swagger.**"})
 @ConditionalOnClass({SwaggerProperties.class})
 @EnableConfigurationProperties({SwaggerProperties.class})
+@ComponentScan(value = {"com.sipa.boot.java8.**.common.swagger.**"})
 public class SwaggerAutoConfiguration {
     private static final String ENV_OF_SHOW = "rel";
+
+    private static final String PROFILE_OF_SHOW = "prod";
 
     @Value("${spring.application.name:}")
     private String appName;
 
     @Value("${current.apollo.env:}")
     private String currentApolloEnv;
+
+    @Value("${spring.profiles.active:}")
+    private String activeProfile;
 
     private final SwaggerProperties swaggerProperties;
 
@@ -56,8 +62,16 @@ public class SwaggerAutoConfiguration {
             .build()
             .securityContexts(Collections.singletonList(securityContexts()))
             .securitySchemes(Collections.singletonList(securitySchemes()))
-            .enable(!SwaggerAutoConfiguration.ENV_OF_SHOW.equalsIgnoreCase(currentApolloEnv))
+            .enable(isEnable())
             .apiInfo(apiInfo());
+    }
+
+    private boolean isEnable() {
+        if (StringUtils.isBlank(currentApolloEnv)) {
+          return !SwaggerAutoConfiguration.PROFILE_OF_SHOW.equalsIgnoreCase(activeProfile);
+        } else {
+            return !SwaggerAutoConfiguration.ENV_OF_SHOW.equalsIgnoreCase(currentApolloEnv);
+        }
     }
 
     private SecurityContext securityContexts() {
