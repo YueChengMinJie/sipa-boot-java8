@@ -48,13 +48,13 @@ public class DecodeInputMessage implements HttpInputMessage {
             // 1、解码得到aes 密钥
             RSA rsa = new RSA(ApiUtil.cleanKey(apiProperty.getRsaPrivateKey()),
                 ApiUtil.cleanKey(apiProperty.getRsaPublicKey()));
-            byte[] decodeAesKey = rsa.decryptFromBase64(encodeAesKey, KeyType.PrivateKey);
+            byte[] decodeAesKey = rsa.decrypt(encodeAesKey, KeyType.PrivateKey);
             // 2、从inputStreamReader 得到aes 加密的内容
             String encodeAesContent = new BufferedReader(new InputStreamReader(httpInputMessage.getBody())).lines()
                 .collect(Collectors.joining(System.lineSeparator()));
             if (!StringUtils.isEmpty(encodeAesContent)) {
                 // 3、AES通过密钥CBC解码
-                String aesDecode = SecureUtil.aes(decodeAesKey).decryptStrFromBase64(encodeAesContent);
+                String aesDecode = SecureUtil.aes(decodeAesKey).decryptStr(encodeAesContent);
                 if (!StringUtils.isEmpty(aesDecode)) {
                     // 4、重新写入到controller
                     this.body = new ByteArrayInputStream(aesDecode.getBytes());

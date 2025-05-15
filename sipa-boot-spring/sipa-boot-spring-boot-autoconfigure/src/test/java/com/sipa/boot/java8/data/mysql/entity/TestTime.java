@@ -11,7 +11,7 @@ import com.baomidou.mybatisplus.annotation.Version;
  * @date 2021/4/27
  */
 public class TestTime {
-    @TableId(type = IdType.UUID)
+    @TableId(type = IdType.ASSIGN_ID)
     protected String id;
 
     protected String sn;

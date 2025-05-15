@@ -12,7 +12,6 @@ import com.sipa.boot.java8.common.oss.annotation.OssStrategy;
 import com.sipa.boot.java8.common.oss.property.OssProperties;
 import com.sipa.boot.java8.common.oss.strategy.AliyunOssStrategy;
 import com.sipa.boot.java8.common.oss.strategy.IOssStrategy;
-import com.sipa.boot.java8.common.oss.strategy.MinioOssStrategy;
 
 /**
  * @author feizhihao
@@ -27,7 +26,7 @@ public class OssStrategyFactory {
 
     private OssStrategyFactory() {
         strategyList.add(AliyunOssStrategy.class);
-        strategyList.add(MinioOssStrategy.class);
+        // strategyList.add(MinioOssStrategy.class);
     }
 
     public IOssStrategy getOssStrategy(OssProperties ossProperties) {

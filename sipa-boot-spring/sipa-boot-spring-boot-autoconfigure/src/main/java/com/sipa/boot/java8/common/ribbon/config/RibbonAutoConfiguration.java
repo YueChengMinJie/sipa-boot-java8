@@ -1,5 +1,6 @@
 package com.sipa.boot.java8.common.ribbon.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
@@ -12,7 +13,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import com.google.api.client.util.Value;
 import com.netflix.loadbalancer.IRule;
 import com.sipa.boot.java8.common.ribbon.rule.MetadataAwareRule;
 

@@ -168,9 +168,9 @@ public class SipaBootCommonConstants {
     public interface HBase {
         String TABLE_NAME = "message";
 
-        String TBOX_COLUMN_SCOPE = "scope";
+        String COLUMN_SCOPE = "scope";
 
-        String TBOX_FAMILY_F = "f";
+        String FAMILY_F = "f";
 
         String MIN_COMMAND = "00";
 

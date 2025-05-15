@@ -2,7 +2,7 @@ package com.sipa.boot.java8.common.common.feign.convert;
 
 import org.springframework.core.convert.converter.Converter;
 
-import com.baomidou.mybatisplus.core.enums.IEnum;
+import com.baomidou.mybatisplus.annotation.IEnum;
 
 /**
  * @author zhouxiajie

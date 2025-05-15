@@ -3,7 +3,7 @@ package com.sipa.boot.java8.data.mongodb.convert.ieum;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.data.convert.WritingConverter;
 
-import com.baomidou.mybatisplus.core.enums.IEnum;
+import com.baomidou.mybatisplus.annotation.IEnum;
 
 /**
  * @author zhouxiajie

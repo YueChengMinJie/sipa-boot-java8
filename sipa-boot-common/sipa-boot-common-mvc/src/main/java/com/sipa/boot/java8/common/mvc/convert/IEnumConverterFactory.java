@@ -5,7 +5,7 @@ import java.util.Map;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.ConverterFactory;
 
-import com.baomidou.mybatisplus.core.enums.IEnum;
+import com.baomidou.mybatisplus.annotation.IEnum;
 import com.google.common.collect.Maps;
 
 /**

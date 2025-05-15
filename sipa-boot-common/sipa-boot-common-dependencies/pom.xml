@@ -34,67 +34,68 @@
         <sipa.boot.version>1.0.0-SNAPSHOT</sipa.boot.version>
 
         <!-- base lib -->
-        <cglib.version>3.2.10</cglib.version>
-        <freemarker.version>2.3.29</freemarker.version>
+        <cglib.version>2.2</cglib.version>
+        <freemarker.version>2.3.34</freemarker.version>
         <javassist.version>3.22.0-GA</javassist.version>
 
         <!-- logback -->
-        <slf4j.version>1.7.26</slf4j.version>
+        <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.1.11</logback.version>
 
         <!-- common -->
-        <common.lang3.version>3.8.1</common.lang3.version>
-        <common.collections.version>4.3</common.collections.version>
-        <common.io.version>2.6</common.io.version>
-        <common.codec.version>1.12</common.codec.version>
+        <common.lang3.version>3.17.0</common.lang3.version>
+        <common.collections.version>4.5.0</common.collections.version>
+        <common.io.version>2.19.0</common.io.version>
+        <common.codec.version>1.18.0</common.codec.version>
         <common.logging.version>1.2</common.logging.version>
         <common.configuration.version>1.10</common.configuration.version>
-        <common.beanutils.version>1.9.3</common.beanutils.version>
-        <common.csv.version>1.8</common.csv.version>
+        <common.beanutils.version>1.10.1</common.beanutils.version>
+        <common.csv.version>1.14.0</common.csv.version>
         <common.pool2.version>2.11.1</common.pool2.version>
         <common.text.version>1.9</common.text.version>
-        <encryption-tools.version>1.0.3</encryption-tools.version>
+        <encryption-tools.version>1.0.4</encryption-tools.version>
         <hutool-all.version>5.8.38</hutool-all.version>
 
         <!-- json -->
         <jackson.version>2.11.4</jackson.version>
-        <fastjson.version>1.2.56</fastjson.version>
-        <ttl.version>2.12.4</ttl.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <ttl.version>2.14.5</ttl.version>
 
         <!-- tool -->
-        <guava.version>27.1-jre</guava.version>
-        <jsoup.version>1.11.3</jsoup.version>
+        <guava.version>33.4.8-jre</guava.version>
+        <jsoup.version>1.20.1</jsoup.version>
         <orika.verion>1.5.4</orika.verion>
         <janino.version>2.7.8</janino.version>
-        <pdfbox.version>2.0.15</pdfbox.version>
-        <easyexcel.version>2.2.6</easyexcel.version>
-        <html2pdf.version>2.1.0</html2pdf.version>
+        <pdfbox.version>2.0.34</pdfbox.version>
+        <easyexcel.version>4.0.3</easyexcel.version>
+        <jsr305.version>3.0.2</jsr305.version>
+        <html2pdf.version>6.1.0</html2pdf.version>
         <useragent.version>1.21</useragent.version>
         <commons-httpclient.version>3.1</commons-httpclient.version>
 
         <!-- time -->
-        <joda.time.version>2.7</joda.time.version>
+        <joda.time.version>2.14.0</joda.time.version>
 
         <!-- vertx -->
         <vertx.version>3.8.5</vertx.version>
 
         <!-- swagger -->
-        <swagger.version>1.6.6</swagger.version>
-        <swagger3.version>2.2.1</swagger3.version>
+        <swagger.version>1.6.15</swagger.version>
+        <swagger3.version>2.2.30</swagger3.version>
         <springfox.version>3.0.0</springfox.version>
 
         <!-- jwt -->
         <jjwt.version>0.6.0</jjwt.version>
 
         <!-- rdb -->
-        <mysql.connector.version>8.0.21</mysql.connector.version>
-        <druid.version>1.1.10</druid.version>
+        <mysql.connector.version>8.0.25</mysql.connector.version>
+        <druid.version>1.2.24</druid.version>
         <sharding.jdbc.version>4.1.1</sharding.jdbc.version>
         <dynamic.datasource.version>2.5.8</dynamic.datasource.version>
-        <mybatis.plus.version>3.1.0</mybatis.plus.version>
+        <mybatis.plus.version>3.5.12</mybatis.plus.version>
 
         <!-- redisson -->
-        <redisson.version>3.10.0</redisson.version>
+        <redisson.version>3.46.0</redisson.version>
 
         <!-- iotdb -->
         <iotdb.version>0.12.4</iotdb.version>
@@ -107,19 +108,19 @@
         <apollo.version>1.3.0</apollo.version>
 
         <!-- storage object -->
-        <minio.version>6.0.13</minio.version>
+        <minio.version>8.5.17</minio.version>
 
         <!-- aliyun -->
-        <aliyun.oss.version>3.4.2</aliyun.oss.version>
-        <aliyun.sdk.version>4.4.0</aliyun.sdk.version>
-        <aliyun.mns.version>1.1.8</aliyun.mns.version>
+        <aliyun.oss.version>3.18.2</aliyun.oss.version>
+        <aliyun.sdk.version>4.7.5</aliyun.sdk.version>
+        <aliyun.mns.version>1.3.0</aliyun.mns.version>
         <alibaba.p3c.pmd.verison>1.3.6</alibaba.p3c.pmd.verison>
 
         <!-- wx -->
-        <weixin.java.version>3.7.0</weixin.java.version>
+        <weixin.java.version>4.7.0</weixin.java.version>
 
         <!-- jpush -->
-        <jpush.version>3.4.4</jpush.version>
+        <jpush.version>3.7.7</jpush.version>
 
         <!-- hitsdb -->
         <hitsdb-client.version>0.3.7</hitsdb-client.version>
@@ -134,6 +135,14 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-bom</artifactId>
+                <version>${mybatis.plus.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -608,30 +617,6 @@
 
             <dependency>
                 <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-annotation</artifactId>
-                <version>${mybatis.plus.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-extension</artifactId>
-                <version>${mybatis.plus.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-core</artifactId>
-                <version>${mybatis.plus.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis.plus.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.baomidou</groupId>
                 <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
                 <version>${dynamic.datasource.version}</version>
             </dependency>
@@ -712,6 +697,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>easyexcel</artifactId>
                 <version>${easyexcel.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.code.findbugs</groupId>
+                <artifactId>jsr305</artifactId>
+                <version>${jsr305.version}</version>
             </dependency>
 
             <dependency>

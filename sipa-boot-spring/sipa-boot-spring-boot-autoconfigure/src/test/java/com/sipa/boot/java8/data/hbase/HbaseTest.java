@@ -13,11 +13,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.sipa.boot.java8.data.hbase.util.HBaseUtils;
 import com.sipa.boot.java8.common.constants.SipaBootCommonConstants;
 import com.sipa.boot.java8.common.utils.TimeUtils;
 import com.sipa.boot.java8.common.utils.Utils;
 import com.sipa.boot.java8.data.hbase.config.HBaseAutoConfiguration;
+import com.sipa.boot.java8.data.hbase.util.HBaseUtils;
 
 /**
  * @author zhouxiajie
@@ -29,7 +29,7 @@ import com.sipa.boot.java8.data.hbase.config.HBaseAutoConfiguration;
 public class HbaseTest {
     @Test
     public void testInit() throws Exception {
-        String tableName = HBaseUtils.getTableName(SipaBootCommonConstants.HBase.TBOX_TABLE_NAME);
+        String tableName = HBaseUtils.getTableName(SipaBootCommonConstants.HBase.TABLE_NAME);
         String TBOX_MESSAGE = "{0}_{1}_{2}";
         LocalDate ld = LocalDateTime.now().toLocalDate();
         Long startTs = TimeUtils.ldt2ts(ld.atStartOfDay());

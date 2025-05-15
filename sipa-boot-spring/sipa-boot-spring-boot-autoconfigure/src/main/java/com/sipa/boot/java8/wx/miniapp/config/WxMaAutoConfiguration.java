@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-import com.google.common.collect.Lists;
 import com.sipa.boot.java8.common.log.Log;
 import com.sipa.boot.java8.common.log.LogFactory;
 import com.sipa.boot.java8.wx.miniapp.property.WxMaProperties;
@@ -19,8 +18,6 @@ import com.sipa.boot.java8.wx.miniapp.util.WxMaBeanUtils;
 import cn.binarywang.wx.miniapp.api.WxMaService;
 import cn.binarywang.wx.miniapp.api.impl.WxMaServiceImpl;
 import cn.binarywang.wx.miniapp.bean.WxMaKefuMessage;
-import cn.binarywang.wx.miniapp.bean.WxMaTemplateData;
-import cn.binarywang.wx.miniapp.bean.WxMaTemplateMessage;
 import cn.binarywang.wx.miniapp.config.impl.WxMaDefaultConfigImpl;
 import cn.binarywang.wx.miniapp.message.WxMaMessageHandler;
 import cn.binarywang.wx.miniapp.message.WxMaMessageRouter;
@@ -69,11 +66,11 @@ public class WxMaAutoConfiguration {
         router.rule()
             .handler(logHandler)
             .next()
-            .rule()
-            .async(false)
-            .content("模板")
-            .handler(templateMsgHandler)
-            .end()
+            // .rule()
+            // .async(false)
+            // .content("模板")
+            // .handler(templateMsgHandler)
+            // .end()
             .rule()
             .async(false)
             .content("文本")
@@ -92,16 +89,16 @@ public class WxMaAutoConfiguration {
         return router;
     }
 
-    private final WxMaMessageHandler templateMsgHandler = (wxMessage, context, service, sessionManager) -> {
-        service.getMsgService()
-            .sendTemplateMsg(WxMaTemplateMessage.builder()
-                .templateId("templateId")
-                .formId("formId")
-                .data(Lists.newArrayList(new WxMaTemplateData("keyword1", "339208499", "#173177")))
-                .toUser(wxMessage.getFromUser())
-                .build());
-        return null;
-    };
+    // private final WxMaMessageHandler templateMsgHandler = (wxMessage, context, service, sessionManager) -> {
+    // service.getMsgService()
+    // .sendTemplateMsg(WxMaTemplateMessage.builder()
+    // .templateId("templateId")
+    // .formId("formId")
+    // .data(Lists.newArrayList(new WxMaTemplateData("keyword1", "339208499", "#173177")))
+    // .toUser(wxMessage.getFromUser())
+    // .build());
+    // return null;
+    // };
 
     private final WxMaMessageHandler logHandler = (wxMessage, context, service, sessionManager) -> {
         service.getMsgService()

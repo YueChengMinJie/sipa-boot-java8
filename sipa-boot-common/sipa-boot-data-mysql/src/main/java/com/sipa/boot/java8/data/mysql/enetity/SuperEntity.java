@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiModelProperty;
 @SuppressWarnings("AlibabaAbstractClassShouldStartWithAbstractNaming")
 public abstract class SuperEntity<T extends Model<T>> extends Model<T> {
     @ApiModelProperty("主键")
-    @TableId(value = "id", type = IdType.UUID)
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     protected String id;
 
     @ApiModelProperty("创建时间")

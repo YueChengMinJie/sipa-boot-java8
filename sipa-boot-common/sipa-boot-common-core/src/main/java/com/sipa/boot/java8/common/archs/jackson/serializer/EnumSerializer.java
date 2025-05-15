@@ -3,7 +3,7 @@ package com.sipa.boot.java8.common.archs.jackson.serializer;
 import java.io.IOException;
 import java.io.Serializable;
 
-import com.baomidou.mybatisplus.core.enums.IEnum;
+import com.baomidou.mybatisplus.annotation.IEnum;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;

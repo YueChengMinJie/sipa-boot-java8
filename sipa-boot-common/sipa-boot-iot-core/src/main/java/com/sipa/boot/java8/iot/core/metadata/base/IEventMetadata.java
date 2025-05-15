@@ -1,6 +1,6 @@
 package com.sipa.boot.java8.iot.core.metadata.base;
 
-import org.apache.tools.ant.types.DataType;
+import org.springframework.data.redis.connection.DataType;
 
 /**
  * @author caszhou

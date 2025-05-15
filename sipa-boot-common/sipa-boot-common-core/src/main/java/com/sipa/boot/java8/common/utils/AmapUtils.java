@@ -3,8 +3,8 @@ package com.sipa.boot.java8.common.utils;
 import java.util.Map;
 import java.util.Objects;
 
-import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.google.common.collect.Lists;
+import com.sipa.boot.java8.common.constants.SipaBootCommonConstants;
 
 /**
  * @author zhouxiajie
@@ -25,7 +25,7 @@ public class AmapUtils {
 
     public static String getCity(Map<String, Object> addressComponent) {
         String city = Utils.stringValueOf(addressComponent.get(CITY_KEY));
-        return Objects.isNull(city) || Lists.newArrayList(StringUtils.EMPTY, EMPTY_CITY).contains(city)
+        return Objects.isNull(city) || Lists.newArrayList(SipaBootCommonConstants.BLANK, EMPTY_CITY).contains(city)
             ? getProvince(addressComponent) : city;
     }
 
