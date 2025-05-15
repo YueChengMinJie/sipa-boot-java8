@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class HBaseProperties {
-    @Value("${sipa.boot.hbase.quorum:cdh2.ivehcore.com,cdh3.ivehcore.com,cdh4.ivehcore.com}")
+    @Value("${sipa.boot.hbase.quorum:cdh2.ycmj.com,cdh3.ycmj.com,cdh4.ycmj.com}")
     private String quorum;
 
     @Value("${sipa.boot.hbase.clientPort:2181}")

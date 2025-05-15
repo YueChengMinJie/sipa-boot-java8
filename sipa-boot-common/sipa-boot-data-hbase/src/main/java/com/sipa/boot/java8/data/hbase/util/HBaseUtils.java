@@ -19,8 +19,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-import com.sipa.boot.java8.data.hbase.property.HBaseProperties;
 import com.sipa.boot.java8.common.utils.Utils;
+import com.sipa.boot.java8.data.hbase.property.HBaseProperties;
 
 /**
  * @author zhouxiajie
@@ -95,8 +95,8 @@ public class HBaseUtils {
     // conf.set("hbase.security.authentication", "kerberos");
     // conf.set("hbase.cluster.distributed", "true");
     // conf.set("hbase.rpc.protection", "privacy");
-    // conf.set("hbase.master.kerberos.principal", "hbase/_HOST@IVEHCORE.COM");
-    // conf.set("hbase.regionserver.kerberos.principal", "hbase/_HOST@IVEHCORE.COM");
+    // conf.set("hbase.master.kerberos.principal", "hbase/_HOST@YCMJ.COM");
+    // conf.set("hbase.regionserver.kerberos.principal", "hbase/_HOST@YCMJ.COM");
     //
     // String principal = HBaseUtils.property.getPrincipal();
     // conf.set("kerberos.principal", principal);

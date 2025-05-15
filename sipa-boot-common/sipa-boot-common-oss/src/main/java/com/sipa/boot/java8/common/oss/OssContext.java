@@ -27,14 +27,13 @@ public class OssContext {
 
     public static final String URL_MARK = "iov-saas.oss-cn-hangzhou.aliyuncs.com";
 
-    public static final String URL_REDIRECT_MARK = "iov-saas.oss.ivehcore.com";
+    public static final String URL_REDIRECT_MARK = "iov-saas.oss.ycmj.com";
 
     private static OssProperties ossProperties;
 
     private static IOssStrategy ossStrategy;
 
-    private OssContext() {
-    }
+    private OssContext() {}
 
     public static OssProperties getOssProperties() {
         return ossProperties;

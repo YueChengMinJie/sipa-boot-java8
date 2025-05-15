@@ -82,10 +82,10 @@ public class SwaggerAutoConfiguration {
         return new ApiInfoBuilder()
             .description(appName.replaceAll(SipaBootCommonConstants.ACROSS, ""))
             .title(appName)
-            .contact(new Contact("sipa.boot", "http://dev.ivehcore.com", "dev@ivehcore.com"))
+            .contact(new Contact("sipa.boot", "http://dev.ycmj.com", "dev@ycmj.com"))
             .version("1.0.0-SNAPSHOT")
             .license("MIT")
-            .termsOfServiceUrl("http://dev.ivehcore.com")
+            .termsOfServiceUrl("http://dev.ycmj.com")
             .build();
     }
     // @formatter:on
