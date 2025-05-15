@@ -25,10 +25,6 @@ public class OssContext {
 
     public static final String FOLDER_FORMAT = "yyyy-MM-dd";
 
-    public static final String URL_MARK = "iov-saas.oss-cn-hangzhou.aliyuncs.com";
-
-    public static final String URL_REDIRECT_MARK = "iov-saas.oss.ycmj.com";
-
     private static OssProperties ossProperties;
 
     private static IOssStrategy ossStrategy;
@@ -103,17 +99,6 @@ public class OssContext {
     public static List<String> copy(String sourceBucketName, String sourceKey, String targetBucketName,
         String targetKey) {
         return ossStrategy.copy(sourceBucketName, sourceKey, targetBucketName, targetKey);
-    }
-
-    /**
-     * 替换车网url.
-     *
-     * @param url
-     *            车网url
-     * @return 替换后的url
-     */
-    public static String changeURL(String url) {
-        return url.replaceAll(URL_MARK, URL_REDIRECT_MARK);
     }
 
     /**

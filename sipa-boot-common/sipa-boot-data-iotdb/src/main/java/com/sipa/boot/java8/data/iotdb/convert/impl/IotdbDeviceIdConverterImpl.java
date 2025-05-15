@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import com.aliyun.hitsdb.client.value.request.Point;
 import com.sipa.boot.java8.common.constants.SipaBootCommonConstants;
-import com.sipa.boot.java8.common.constants.SipaBootTsdbConstants;
 import com.sipa.boot.java8.common.log.Log;
 import com.sipa.boot.java8.common.log.LogFactory;
 import com.sipa.boot.java8.data.iotdb.convert.base.IIotdbDeviceIdConverter;
@@ -33,7 +32,8 @@ public class IotdbDeviceIdConverterImpl implements IIotdbDeviceIdConverter {
         if (Objects.nonNull(point)) {
             Map<String, String> tags = point.getTags();
             if (MapUtils.isNotEmpty(tags)) {
-                return getSg() + SipaBootCommonConstants.POINT + tags.get(SipaBootTsdbConstants.TagName.COLLECTION_ID);
+                return getSg() + SipaBootCommonConstants.POINT
+                    + tags.get(SipaBootCommonConstants.TagName.COLLECTION_ID);
             } else {
                 LOGGER.warn("Tags is empty.");
             }

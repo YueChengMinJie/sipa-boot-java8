@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.aliyun.hitsdb.client.value.request.Point;
-import com.sipa.boot.java8.common.constants.SipaBootTsdbConstants;
+import com.sipa.boot.java8.common.constants.SipaBootCommonConstants;
 import com.sipa.boot.java8.data.iotdb.convert.IotdbRecordConverter;
 import com.sipa.boot.java8.data.iotdb.convert.impl.IotdbDataTypeConverterImpl;
 import com.sipa.boot.java8.data.iotdb.convert.impl.IotdbDeviceIdConverterImpl;
@@ -49,7 +49,7 @@ public class IotdbUtilsIT {
         Point point = Point.metric("s1")
             .timestamp(System.currentTimeMillis())
             .value(5)
-            .tag(Collections.singletonMap(SipaBootTsdbConstants.TagName.COLLECTION_ID, "d1"))
+            .tag(Collections.singletonMap(SipaBootCommonConstants.TagName.COLLECTION_ID, "d1"))
             .build();
         IotdbUtils.insertRecord(point);
     }

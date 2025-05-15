@@ -1,8 +1,6 @@
 package com.sipa.boot.java8.common.constants;
 
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * @author zhouxiajie
@@ -67,11 +65,6 @@ public class SipaBootCommonConstants {
      * 默认超级管理员角色名
      */
     public static final String SIPA_BOOT_SUPER_ADMIN_ROLE = "ROLE_SUPER_ADMIN";
-
-    /**
-     * 默认协议模板的模板id
-     */
-    public static final String DEFAULT_PROTOCOL_TEMPLATE_ID = "1429a4118a5756128008c11434469d94";
 
     /**
      * 默认租户id
@@ -173,11 +166,7 @@ public class SipaBootCommonConstants {
     }
 
     public interface HBase {
-        String TBOX_TABLE_NAME = "tboxMessage";
-
-        String VECC_TABLE_NAME = "veccReceipt";
-
-        String DOCK_ZJ_TABLE_NAME = "dockZjReceipt";
+        String TABLE_NAME = "message";
 
         String TBOX_COLUMN_SCOPE = "scope";
 
@@ -186,8 +175,6 @@ public class SipaBootCommonConstants {
         String MIN_COMMAND = "00";
 
         String MAX_COMMAND = "FF";
-
-        List<String> VECC_COLUMN_FAMILY = Arrays.asList("responseType", "vin", "responseTime", "message");
     }
 
     public interface DataParser {
@@ -316,10 +303,14 @@ public class SipaBootCommonConstants {
     }
 
     public interface Canary {
-        String COOKIE = "Sipa Boot-Canary";
+        String COOKIE = "Sipa-Boot-Canary";
 
         String ALWAYS = "always";
 
         String METADATA = "canary";
+    }
+
+    public interface TagName {
+        String COLLECTION_ID = "collection_id";
     }
 }

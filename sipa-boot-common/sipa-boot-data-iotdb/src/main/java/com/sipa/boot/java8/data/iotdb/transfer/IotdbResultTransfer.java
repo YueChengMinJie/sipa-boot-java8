@@ -9,7 +9,6 @@ import org.apache.iotdb.tsfile.read.common.RowRecord;
 
 import com.aliyun.hitsdb.client.value.response.QueryResult;
 import com.sipa.boot.java8.common.constants.SipaBootCommonConstants;
-import com.sipa.boot.java8.common.constants.SipaBootTsdbConstants;
 import com.sipa.boot.java8.common.utils.ListUtils;
 import com.sipa.boot.java8.common.utils.MeasurementUtils;
 import com.sipa.boot.java8.data.iotdb.value.iotdb.IotdbQueryResult;
@@ -69,7 +68,7 @@ public class IotdbResultTransfer {
                 QueryResult qr = new QueryResult();
                 qr.setMetric(MeasurementUtils.untransform(measurement));
                 qr.setDps(getDps(times, values));
-                qr.setTags(Collections.singletonMap(SipaBootTsdbConstants.TagName.COLLECTION_ID, path.getDevice()));
+                qr.setTags(Collections.singletonMap(SipaBootCommonConstants.TagName.COLLECTION_ID, path.getDevice()));
                 to.add(qr);
             }
         }

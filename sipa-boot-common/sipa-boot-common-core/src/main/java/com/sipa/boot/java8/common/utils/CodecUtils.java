@@ -96,7 +96,7 @@ public class CodecUtils {
 
         private static final int IV_LENGTH = 8;
 
-        private static final String KEY = "SIPA-BOOT-IOV";
+        private static final String KEY = "SIPA-BOOT";
 
         private static final String ORIGIN_ENCODER = "md5";
 

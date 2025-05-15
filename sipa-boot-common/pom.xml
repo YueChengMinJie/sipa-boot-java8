@@ -65,12 +65,12 @@
     <distributionManagement>
         <repository>
             <id>nexus-releases</id>
-            <url>http://127.0.0.1:8081/repository/nexus_release/</url>
+            <url>http://127.0.0.1:8081/repository/maven-release/</url>
         </repository>
 
         <snapshotRepository>
             <id>nexus-snapshots</id>
-            <url>http://127.0.0.1:8081/repository/nexus_snapshot/</url>
+            <url>http://127.0.0.1:8081/repository/maven-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
 
