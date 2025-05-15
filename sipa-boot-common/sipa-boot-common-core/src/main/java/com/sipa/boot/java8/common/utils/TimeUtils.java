@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.time.*;
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import com.sipa.boot.java8.common.constants.SipaBootCommonConstants;
 
 /**
@@ -88,6 +90,7 @@ public class TimeUtils {
      *            format
      * @return date
      */
+    @Nullable
     public static Date parse(String date, String format) {
         SimpleDateFormat df = new SimpleDateFormat(format);
         try {
