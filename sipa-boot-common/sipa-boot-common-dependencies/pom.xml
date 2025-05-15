@@ -54,7 +54,7 @@
         <common.pool2.version>2.11.1</common.pool2.version>
         <common.text.version>1.9</common.text.version>
         <encryption-tools.version>1.0.3</encryption-tools.version>
-        <hutool-all.version>4.5.0</hutool-all.version>
+        <hutool-all.version>5.8.38</hutool-all.version>
 
         <!-- json -->
         <jackson.version>2.11.4</jackson.version>
