@@ -7,11 +7,13 @@ import com.sipa.boot.java8.common.enums.EResCode;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 /**
  * @author zhouxiajie
  * @date 2018/3/1
  */
+@Data
 @ApiModel(description = "响应统一返回格式")
 public class ResponseWrapper<T> implements Serializable {
     private static final long serialVersionUID = 4031700508559143217L;
@@ -45,6 +47,7 @@ public class ResponseWrapper<T> implements Serializable {
         ResponseWrapper<?> res = new ResponseWrapper<>();
         res.setSuccess(true);
         res.setStatus(200);
+        res.setResCode(EResCode.SUCCESS);
         return res;
     }
 
@@ -52,6 +55,7 @@ public class ResponseWrapper<T> implements Serializable {
         ResponseWrapper<T> res = new ResponseWrapper<>();
         res.setSuccess(true);
         res.setStatus(200);
+        res.setResCode(EResCode.SUCCESS);
         return res;
     }
 
@@ -65,6 +69,7 @@ public class ResponseWrapper<T> implements Serializable {
         res.setMessage(msg);
         res.setSuccess(true);
         res.setStatus(200);
+        res.setResCode(EResCode.SUCCESS);
         return res;
     }
 
@@ -119,61 +124,5 @@ public class ResponseWrapper<T> implements Serializable {
     @SuppressWarnings("unchecked")
     public Class<ResponseWrapper<T>> genericClass() {
         return (Class<ResponseWrapper<T>>)this.getClass();
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    private void setMessage(String message) {
-        this.message = message;
-    }
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    private void setSuccess(boolean success) {
-        this.success = success;
-    }
-
-    public EResCode getResCode() {
-        return resCode;
-    }
-
-    public void setResCode(EResCode resCode) {
-        this.resCode = resCode;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
-    public Long getTimestamp() {
-        return timestamp;
-    }
-
-    public void setTimestamp(Long timestamp) {
-        this.timestamp = timestamp;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
     }
 }
