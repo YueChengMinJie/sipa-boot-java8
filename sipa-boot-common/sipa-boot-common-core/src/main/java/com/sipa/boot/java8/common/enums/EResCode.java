@@ -38,5 +38,5 @@ public enum EResCode implements IEnum<Integer> {
 
     ;
 
-    private Integer value;
+    private final Integer value;
 }
