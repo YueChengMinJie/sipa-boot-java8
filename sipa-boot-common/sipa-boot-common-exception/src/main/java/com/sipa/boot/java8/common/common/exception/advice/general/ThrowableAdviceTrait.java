@@ -3,6 +3,7 @@ package com.sipa.boot.java8.common.common.exception.advice.general;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,6 +39,7 @@ public interface ThrowableAdviceTrait extends ExceptionAdviceTrait {
         if (exception instanceof RuntimeException) {
             errorMessage = exception.getMessage();
             errorEntity = new ErrorEntity(new BadRequestException(errorMessage));
+            LOGGER.error(StringUtils.EMPTY, exception);
         } else {
             errorMessage = ApplicationException.DEFAULT_APPLICATION_EXCEPTION_ERROR_MESSAGE
                 + (getExceptionHandlingProperties().isShowUnknownExceptionStack()
